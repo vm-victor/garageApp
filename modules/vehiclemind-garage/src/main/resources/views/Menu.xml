@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.2.xsd">
+
+  <menuitem name="menu-garage"
+    title="My Garage" />
+
+  <menuitem name="menu-garage-customers"
+    parent="menu-garage"
+    title="My Customers"
+    action="contact.all"/>
+
+    <menuitem name="menu-garage-cars"
+    parent="menu-garage""
+    title="MyFleet"
+    action="contact.all"/>
+
+    <menuitem name="menu-garage-support"
+    parent="menu-garage""
+    title="Identifix"
+    action="contact.all"/>
+
+  <action-view name="contact.all"
+    title="Hola Muchacha"
+    model="com.axelor.contact.db.Contact">
+    <view type="grid" name="contact-grid"/>
+    <view type="form" name="contact-form"/>
+  </action-view>
+
+</object-views>
