@@ -5,28 +5,37 @@
   http://axelor.com/xml/ns/object-views/object-views_5.2.xsd">
 
   <menuitem name="menu-garage"
-    title="My Garage" />
+    title="My VM Garage" />
 
   <menuitem name="menu-garage-customers"
     parent="menu-garage"
     title="My Customers"
-    action="contact.all"/>
+    action="vm.customers.all"/>
 
-    <menuitem name="menu-garage-cars"
-    parent="menu-garage""
+    <!-- <menuitem name="menu-garage-cars"
+    parent="menu-garage"
     title="MyFleet"
-    action="contact.all"/>
+    action="vm.fleet.all"/>
 
     <menuitem name="menu-garage-support"
-    parent="menu-garage""
+    parent="menu-garage"
     title="Identifix"
-    action="contact.all"/>
+    action="vm.support.all"/> -->
 
-  <action-view name="contact.all"
-    title="Hola Muchacha"
-    model="com.axelor.contact.db.Contact">
-    <view type="grid" name="contact-grid"/>
-    <view type="form" name="contact-form"/>
+    <menuitem name="menu-garage-activation"
+    parent="menu-garage"
+    title="Vm activation"
+    action="vm.activation.all"/> 
+
+  <action-view name="vm.customers.all"
+    title="VM Customers"
+    model="com.vehiclemind.garage.db.Customers">
+    <view type="grid" name="customers-grid"/>
+    <view type="form" name="customers-form"/>
+  </action-view>
+
+  <action-view name="vm.activation.all"
+  title="VM Customers">
   </action-view>
 
 </object-views>
