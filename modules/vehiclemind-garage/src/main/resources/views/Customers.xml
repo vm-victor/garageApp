@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.2.xsd">
+
+  <grid name="customers-grid" title="Customers" model="com.vehiclemind.garage.db.Customers">
+        <field name="name" />
+        <field name="email" />
+        <field name="phone" />
+        <field name="adress" />
+  </grid>  
+   
+
+  <form name="customers-form" title="Customers" model="com.vehiclemind.garage.db.Customers">
+    <panel title="Overview">
+        <field name="name" />
+        <field name="email" />
+        <field name="phone" />
+        <field name="adress" />
+    </panel>  
+
+
+    <panel-related field="devices" editable="false">
+        <field name="uuid"/>
+    </panel-related>
+
+    <panel-related field="appointments" editable="false">
+        <field name="title"/>
+        <field name="appointmentDate"/>
+    </panel-related>
+  </form>
+
+  <cards name="customers-cards"  model="com.vehiclemind.garage.db.Customers" title="Customers">
+    <field name="name" />
+    <field name="email" />
+    <field name="phone" />
+    <field name="address" />
+    <template><![CDATA[
+      <div class="span8">
+        <address>
+          <strong>{{name}} {{namw}}</strong><br>
+          {{address}}<br>
+          Phone : {{phone}}<br>
+          Email : {{email}}<br>
+        </address>
+      </div>
+    ]]></template>
+  </cards>
+</object-views>

@@ -1,4 +1,4 @@
 rootProject.name = 'vmgarage'
-includeBuild '../axelor-open-platform/'
+// includeBuild '../axelor-open-platform/'
 // include "modules:axelor-contact"
 include "modules:vehiclemind-garage"

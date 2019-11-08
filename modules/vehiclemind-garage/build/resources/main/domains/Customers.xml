@@ -12,7 +12,6 @@
     <string name="phone" max="20" massUpdate="true" />
     <string name="adress" max="20" massUpdate="true" />
     <one-to-many name="devices" ref="com.vehiclemind.garage.db.Devices" mappedBy="customer" />
-    <one-to-many name="appointments" ref="com.vehiclemind.garage.db.Appointments" mappedBy="customer" />
     <finder-method name="findByName" using="Name" />
     <finder-method name="findByEmail" using="email" />
   </entity>

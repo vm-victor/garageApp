@@ -12,30 +12,26 @@
     title="My Customers"
     action="vm.customers.all"/>
 
-    <!-- <menuitem name="menu-garage-cars"
+  <menuitem name="menu-garage-device"
+    title="Devices"
     parent="menu-garage"
-    title="MyFleet"
-    action="vm.fleet.all"/>
-
-    <menuitem name="menu-garage-support"
-    parent="menu-garage"
-    title="Identifix"
-    action="vm.support.all"/> -->
-
-    <menuitem name="menu-garage-activation"
-    parent="menu-garage"
-    title="Vm activation"
-    action="vm.activation.all"/> 
+    action="vm.devices.all"/>
 
   <action-view name="vm.customers.all"
     title="VM Customers"
     model="com.vehiclemind.garage.db.Customers">
     <view type="grid" name="customers-grid"/>
+    <view type="cards" name="customers-cards"/>
     <view type="form" name="customers-form"/>
+    <context name="json-enhance" expr="true"/>
   </action-view>
 
-  <action-view name="vm.activation.all"
-  title="VM Customers">
+  
+  <action-view name="vm.devices.all"
+    title="VM Devices"
+    model="com.vehiclemind.garage.db.Devices">
+    <view type="grid"/>
+    <view type="form"/>
   </action-view>
 
 </object-views>
