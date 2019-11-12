@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.2.xsd">
+
+  <module name="slots" package="com.vehiclemind.garage.db"/>
+
+  <entity name="Slots" sequential="true" cacheable="true">
+    <integer name="slot_id" required="true" />
+    <one-to-many name="appointment" ref="com.vehiclemind.garage.db.Appointments"  mappedBy="slot"/>
+
+    <finder-method name="findSlot" using="int:slot_id,LocalDateTime:date"
+      filter="self.slot_id = :slot_id and self.appointment.appointmentDate = :date"
+      all="true" />
+  </entity>
+</domain-models>

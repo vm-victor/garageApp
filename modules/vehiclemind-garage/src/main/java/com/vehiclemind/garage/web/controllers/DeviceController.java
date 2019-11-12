@@ -9,5 +9,7 @@ import com.axelor.rpc.ActionResponse;
 public class DeviceController extends JpaSupport {
     public void onUpdateUuid(ActionRequest request, ActionResponse response) {
         System.out.println("test");
+
+        // response.setFlash("test");
     }
 }
